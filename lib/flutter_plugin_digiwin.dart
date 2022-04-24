@@ -23,4 +23,9 @@ class FlutterPluginDigiwin {
 
     LogUtil.d(object, tag: tag);
   }
+  static void e(Object? object, {String? tag}) {
+    print('eeee');
+
+    LogUtil.e(object, tag: tag);
+  }
 }

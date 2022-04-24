@@ -65,7 +65,7 @@ class _MyAppState extends State<MyApp> {
         body: Center(
           child: Text('Running on: $_platformVersion\n'),
         ),
-        backgroundColor: Colors.redAccent,
+        backgroundColor: Colors.brown,
       ),
     );
   }
