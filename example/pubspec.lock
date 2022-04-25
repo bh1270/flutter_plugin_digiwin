@@ -121,9 +121,11 @@ packages:
   flutter_plugin_digiwin:
     dependency: "direct main"
     description:
-      path: ".."
-      relative: true
-    source: path
+      path: "."
+      ref: HEAD
+      resolved-ref: "6a2b6da0f344cab9711fd2ce80b6047a32325b8a"
+      url: "https://github.com/bh1270/flutter_plugin_digiwin.git"
+    source: git
     version: "0.0.1"
   flutter_test:
     dependency: "direct dev"

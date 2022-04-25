@@ -30,6 +30,11 @@ class _MyAppState extends State<MyApp> {
     Future.delayed(Duration(milliseconds: 1500), () {
       FlutterPluginDigiwin.d("111", tag: 'ttttt');
       FlutterPluginDigiwin.e("2222",tag: 'eeeee');
+      FlutterPluginDigiwin().testCallBack('我是测试的的吗',(obj){
+        FlutterPluginDigiwin.d(obj);
+
+      });
+
 
     });
   }

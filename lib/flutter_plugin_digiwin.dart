@@ -8,7 +8,7 @@ typedef TestCallBack = void Function(dynamic obj);
 
 class FlutterPluginDigiwin {
   static const MethodChannel _channel = MethodChannel('flutter_plugin_digiwin');
-  TestCallBack? callBack;
+  // TestCallBack? callBack;
 
   static Future<String?> get platformVersion async {
     final String? version = await _channel.invokeMethod('getPlatformVersion');
@@ -33,7 +33,7 @@ class FlutterPluginDigiwin {
     LogUtil.e(object, tag: tag);
   }
 
-  void testCallBack(dynamic obj) async {
+  void testCallBack(dynamic obj,TestCallBack? callBack) async {
     Future.delayed(
         const Duration(seconds: 3),
         () => {
