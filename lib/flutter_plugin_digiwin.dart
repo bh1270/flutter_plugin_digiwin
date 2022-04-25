@@ -4,8 +4,11 @@ import 'package:flustars/flustars.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+typedef TestCallBack = void Function(dynamic obj);
+
 class FlutterPluginDigiwin {
   static const MethodChannel _channel = MethodChannel('flutter_plugin_digiwin');
+  TestCallBack? callBack;
 
   static Future<String?> get platformVersion async {
     final String? version = await _channel.invokeMethod('getPlatformVersion');
@@ -15,7 +18,7 @@ class FlutterPluginDigiwin {
   static init() {
     print('init');
 
-    LogUtil.init(tag: 'zzzz', maxLen: 100000,isDebug: true);
+    LogUtil.init(tag: 'zzzz', maxLen: 100000, isDebug: true);
   }
 
   static void d(Object? object, {String? tag}) {
@@ -23,9 +26,21 @@ class FlutterPluginDigiwin {
 
     LogUtil.d(object, tag: tag);
   }
+
   static void e(Object? object, {String? tag}) {
     print('eeee');
 
     LogUtil.e(object, tag: tag);
+  }
+
+  void testCallBack(dynamic obj) async {
+    Future.delayed(
+        const Duration(seconds: 3),
+        () => {
+              if (ObjectUtil.isNotEmpty(callBack))
+                {
+                  callBack!({"test": obj})
+                }
+            });
   }
 }

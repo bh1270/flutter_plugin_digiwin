@@ -29,6 +29,7 @@ class _MyAppState extends State<MyApp> {
     initPlatformState();
     Future.delayed(Duration(milliseconds: 1500), () {
       FlutterPluginDigiwin.d("111", tag: 'ttttt');
+      FlutterPluginDigiwin.e("2222",tag: 'eeeee');
 
     });
   }
