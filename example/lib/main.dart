@@ -1,3 +1,4 @@
+import 'package:digiwhale_photo_view/digiwhale_photo_view.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
@@ -8,7 +9,6 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
   FlutterPluginDigiwin.init();
-
 
   runApp(const MyApp());
 }
@@ -29,13 +29,13 @@ class _MyAppState extends State<MyApp> {
     initPlatformState();
     Future.delayed(Duration(milliseconds: 1500), () {
       FlutterPluginDigiwin.d("111", tag: 'ttttt');
-      FlutterPluginDigiwin.e("2222",tag: 'eeeee');
-      FlutterPluginDigiwin().testCallBack('我是测试的的吗',(obj){
-        FlutterPluginDigiwin.d(obj);
+      FlutterPluginDigiwin.e("2222", tag: 'eeeee');
 
+      FlutterPluginDigiwin().testCallBack((obj) {
+        FlutterPluginDigiwin.d(obj);
       });
 
-
+      DigiwhalePhotoView().testPush(context);
     });
   }
 

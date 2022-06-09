@@ -33,8 +33,10 @@ dependencies:
   flutter_plugin_digiwin:
     git:
       url: https://github.com/bh1270/flutter_plugin_digiwin.git
-#      ref: 2cd954f62bb2ea66b9f1e4fb5260a1fef21c0152
-
+      ref: 2cd954f62bb2ea66b9f1e4fb5260a1fef21c0152
+  digiwhale_photo_view:
+    git:
+      url: https://github.com/bh1270/photo_view_test.git
 
 
 
